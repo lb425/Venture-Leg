@@ -78,8 +78,11 @@ module baseScrews()
 		{
 			rotate(a=[90,-90,90])
 			{
+				
 				translate([0,-3,-25])
 				{
+					translate([-1,0,0])
+						cube([1, 6,50], center=false);
 					cube([1, 6,50], center=false);
 					translate([1,.5,0])
 						cube([1, 5,50], center=false);
@@ -93,6 +96,8 @@ module baseScrews()
 			{
 				translate([0,-3,-25])
 				{
+					translate([-1,0,0])
+						cube([1, 6,50], center=false);
 					cube([1, 6,50], center=false);
 					translate([1,.5,0])
 						cube([1, 5,50], center=false);
@@ -178,6 +183,8 @@ module leg()
 //screwHole(1,2,5);
 //holePattern(4,7,1,2,5);
 base();
+
+
 rotate(a=[0,0,45])
 {
 	translate([26,2,0])
