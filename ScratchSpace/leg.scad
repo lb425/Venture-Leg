@@ -38,9 +38,10 @@ module screwHole (screwSize, headSize, lowerThickness)
 {
 	////Hole models are 13 mm
 	hull() {
-		cylinder(r=screwSize, h=totalThickness, center = false, $fn=100);
-		translate([5,0,0])
-			cylinder(r=screwSize, h=totalThickness, center = false, $fn=100);
+		translate([0,0,-1])
+			cylinder(r=screwSize, h=totalThickness+1, center = false, $fn=100);
+		translate([5,0,-1])
+			cylinder(r=screwSize, h=totalThickness+1, center = false, $fn=100);
 	}
 	translate([0,0,lowerThickness])
 		cylinder(r=headSize, h=totalThickness-lowerThickness, center = false, $fn=100);
@@ -185,7 +186,7 @@ rotate(a=[0,0,45])
 		{
 			resize([35,70,4])
 			{
-				leg();
+				//leg();
 			}
 		}
 	}
