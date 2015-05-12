@@ -26,7 +26,7 @@ module leg()
 			
 				translate([17,0,0])
 				{
-					cube([28, 4,legthickness], center=false);
+					cube([27, 4,legthickness], center=false);
 				}
 	
 				translate([16.5,33,0])
